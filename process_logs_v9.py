@@ -7,7 +7,7 @@ from drain3.template_miner_config import TemplateMinerConfig
 # Configuration de Drain3
 config = TemplateMinerConfig()
 
-# Définir les paramètres pour Drain3
+# Configuration de Drain3 avec ces paramètres
 config.snapshot_interval_minutes = 1
 config.persist_snapshot = True
 config.persist_state = True
@@ -16,6 +16,26 @@ config.tree_max_depth = 4
 config.min_similarity_threshold = 0.4
 config.max_clusters = 10000
 
+# Expression régulière pour les journaux Hadoop
+# 1. Remplace l'horodatage (format typique des journaux).
+# 2. Remplace le niveau de journalisation (INFO, WARN, ERROR, etc.).
+# 3. Remplace les parties dynamiques comme des identifiants ou des adresses spécifiques.
+config.profiling_enabled = False  # Désactiver le profiling pour accélérer le traitement
+config.custom_extractors = [
+    {
+        "regex": r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(,\d+)?",  # Horodatage
+        "replacement": "<*>",
+    },
+    {
+        "regex": r"(INFO|WARN|ERROR|DEBUG)",  # Niveau de journalisation
+        "replacement": "<*>",
+    },
+    {
+        "regex": r"appattempt_\d+_\d+_\d+",  # Identifiant dynamique
+        "replacement": "<*>",
+    },
+]
+
 persistence = FilePersistence("drain3_state.bin")
 template_miner = TemplateMiner(persistence, config)
 
@@ -23,11 +43,26 @@ template_miner = TemplateMiner(persistence, config)
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger(__name__)
 
+import re
+# Pre-processing
+def preprocess_log_line(log_line):
+    # Supprime l'horodatage
+    log_line = re.sub(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}", "", log_line)
+    # Supprime le niveau de journalisation
+    log_line = re.sub(r"\b(INFO|ERROR|WARN|DEBUG|TRACE)\b", "", log_line)
+    # Supprime le thread
+    log_line = re.sub(r"\[\w+\]", "", log_line)
+    # Supprime les espaces inutiles
+    log_line = re.sub(r"\s+", " ", log_line).strip()
+    return log_line
+
 def process_log_line(line):
     """
     Traitement de chaque ligne du fichier journal.
     """
-    result = template_miner.add_log_message(line)
+
+    clean_line=preprocess_log_line(line)
+    result = template_miner.add_log_message(clean_line)
 
     if result["change_type"] != "none":
         # Vérifie si la clé 'template' existe dans le résultat
@@ -110,28 +145,33 @@ def generate_event_matrix(template_miner):
 
     clusters_data = []  # Liste pour stocker les données extraites des clusters
 
-    # Extraction des données pertinentes de chaque cluster
-    for cluster in template_miner.drain.clusters:
-        clusters_data.append(cluster);
+    # Rassembler les données des clusters
+    for cluster in events:
+        clusters_data.append({
+            "Cluster ID": cluster.cluster_id,
+            "Size": cluster.size,
+            "Template": cluster.get_template()
+        })
 
     # Créer un DataFrame Pandas pour représenter la matrice des événements
     event_matrix = pd.DataFrame(clusters_data)
     
-    # Affichage de la matrice
-    print("Affichage de la matrice d'événements :")
-    print(event_matrix)
-
     # Enregistrer la matrice comme fichier CSV
     event_matrix.to_csv('event_matrix.csv', index=False)
 
     return event_matrix
 
-# Exemple d'utilisation de la fonction
+# Utilisation de la fonction generate_event_matrix
 event_matrix_df = generate_event_matrix(template_miner)
 
-# Calculer les statistiques de base
-event_counts = event_matrix_df.sum(axis=0)
-failure_events = event_matrix_df.columns[event_counts > 0]  # Supposons que les pannes sont identifiées par un certain seuil
+# Assurer que event_counts est une série numérique
+event_counts = event_matrix_df.sum(axis=0)  # Calculer les sommes des événements par colonne
+event_counts = pd.to_numeric(event_counts, errors='coerce')  # Convertir en numérique, NaN si non convertible
+
+# Identifier les colonnes où le nombre d'événements est supérieur à 0
+failure_events = event_counts[event_counts > 0].index
+print(f"Les événements avec des occurrences (échec) : {failure_events}")
+
 
 print("Événements liés aux pannes:")
 print(failure_events)
@@ -154,10 +194,18 @@ def plot_failure_distribution(event_counts):
     plt.ylabel('Nombre d\'occurrences')
     plt.title('Distribution des pannes')
 
-    # Extraire les numéros d'événements à partir des chaînes (par exemple, 'Event_1' -> 1)
-    event_numbers = [int(event.split('_')[1]) for event in failure_events]
+    # Extraire les numéros d'événements uniquement si le format est correct
+    event_numbers = []
+    for event in failure_events:
+        try:
+            # Extraire le numéro après "Event_"
+            if "_" in event:
+                event_numbers.append(int(event.split('_')[1]))
+        except (IndexError, ValueError):
+            # Ignorer les événements avec un format inattendu
+            continue
 
-    # Sélectionner les événements multiples de 5 (au lieu de 10)
+    # Sélectionner les événements multiples de 5
     event_labels = [f'Event_{number}' for number in event_numbers if number % 5 == 0]
     event_positions = [failure_events[i] for i, number in enumerate(event_numbers) if number % 5 == 0]
 
@@ -169,66 +217,105 @@ def plot_failure_distribution(event_counts):
 # Afficher les statistiques des pannes
 plot_failure_distribution(event_counts)
 
-# Afficher les statistiques des pannes
-plot_failure_distribution(event_counts)
 
-
-# Apprentissage avec modele de regression logistique
+# Apprentissage avec modèle de regression logistique
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, recall_score, roc_auc_score, precision_score
-import numpy as np
+import matplotlib.pyplot as plt
 
-# Affichage des premières lignes pour inspecter le DataFrame
-print("DF headers")
+# Vérification de la structure du DataFrame
+print("Affichage des premières lignes de la matrice d'événements :")
 print(event_matrix_df.head())
-
-# Affichage de la structure complète du DataFrame
-print("DF info")
 print(event_matrix_df.info())
 
+# Afficher la matrice d'événements 
+print("Matrice d'événements : ")
+print (event_matrix_df)
 
-# Vérification des données préparées
-print(event_matrix_df)
+"""
+Exemple : FATAL org.apache.hadoop.mapred.Task: Task attempt_1445182159119_0004_m_000004_0 
+failed : org.apache.hadoop.fs.FSError: java.io.IOException: There is not enough space on the disk
+"""
 
-# Séparation des features et de la cible
-X = event_matrix_df.drop(columns=['Event_100'])
-y = event_matrix_df['Event_100']
-# Suppression des corrélations élevées
+# Afficher les colonnes de la matrice
+print("Les colonnes de la matrice")
+print(event_matrix_df.columns)
+
+
+# Afficher les lignes de la matrice
+print("Les lignes de la matrice")
+print(event_matrix_df.lines)
+
+# Définition de l'événement cible (anomalie)
+target_event = 1020  # Espace disque insuffisant 
+if target_event not in event_matrix_df.columns:
+    raise ValueError(f"L'événement cible '{target_event}' n'est pas présent dans les colonnes de la matrice.")
+
+# Séparation des features (X) et de la cible (y)
+y = event_matrix_df[target_event]  # Cible : présence ou absence d'une anomalie
+X = event_matrix_df.drop(columns=[target_event])  # Suppression de la cible des features
+
+# Élimination des corrélations élevées (corrélation > 70%)
+correlation_threshold = 0.7
 corr_matrix = X.corr().abs()
 upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
-to_drop = [column for column in upper.columns if any(upper[column] > 0.9)]
+to_drop = [column for column in upper.columns if any(upper[column] > correlation_threshold)]
 X = X.drop(columns=to_drop)
 
-# Séparation des jeux de données d'entraînement et de test avec stratification
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+print(f"Colonnes éliminées pour corrélation élevée : {to_drop}")
+
+# Définir une fenêtre glissante pour organiser les données
+window_size = 5  # Définit la taille de la fenêtre 
+X['Window_ID'] = np.arange(len(X)) // window_size
+X = X.groupby('Window_ID').sum()
+y = y.groupby(event_matrix_df.index // window_size).max()
+
+print("Données après application de la fenêtre glissante :")
+print(X.head())
+print(y.head())
+
+# Division des données en 60% entraînement, 20% validation, 20% test
+X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.4, random_state=42, stratify=y)
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42, stratify=y_temp)
+
+print("Dimensions des jeux de données :")
+print(f"X_train: {X_train.shape}, X_val: {X_val.shape}, X_test: {X_test.shape}")
 
 # Entraînement du modèle de régression logistique
 model = LogisticRegression(max_iter=1000)
 model.fit(X_train, y_train)
 
-# Prédictions sur les données de test
-y_pred = model.predict(X_test)
-y_pred_proba = model.predict_proba(X_test)[:, 1]
+# Évaluation sur les données de validation
+y_val_pred = model.predict(X_val)
+y_val_pred_proba = model.predict_proba(X_val)[:, 1]
 
-# Évaluation du modèle
-precision1 = precision_score(y_test, y_pred)
-recall1 = recall_score(y_test, y_pred)
-accuracy1 = accuracy_score(y_test, y_pred)
+precision = precision_score(y_val, y_val_pred)
+recall = recall_score(y_val, y_val_pred)
+accuracy = accuracy_score(y_val, y_val_pred)
 
-# Calcul de l'AUC uniquement si les deux classes sont présentes dans y_test
-if len(np.unique(y_test)) > 1:
-    auc1 = roc_auc_score(y_test, y_pred_proba)
+# Calcul de l'AUC
+if len(np.unique(y_val)) > 1:
+    auc = roc_auc_score(y_val, y_val_pred_proba)
 else:
-    auc1 = None
-    print("AUC score cannot be computed as only one class is present in y_test.")
+    auc = None
+    print("AUC score ne peut pas être calculé : une seule classe présente dans les données de validation.")
 
-print(f"Précision: {precision}")
-print(f"Rappel: {recall}")
+# Affichage des résultats
+print("Résultats sur les données de validation :")
+print(f"Précision : {precision:.2f}")
+print(f"Rappel : {recall:.2f}")
+print(f"Exactitude (Accuracy) : {accuracy:.2f}")
 if auc is not None:
-    print(f"AUC: {auc}")
+    print(f"AUC : {auc:.2f}")
 
+# Optionnel : afficher un diagramme des coefficients du modèle
+feature_importances = pd.Series(model.coef_[0], index=X_train.columns)
+feature_importances.nlargest(10).plot(kind='barh')
+plt.title("Top 10 caractéristiques importantes pour la régression logistique")
+plt.show()
 
 # Apprentissage avec modele de forêt aléatoire (Random Forest)
 

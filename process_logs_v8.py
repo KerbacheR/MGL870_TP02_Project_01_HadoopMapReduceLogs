@@ -7,7 +7,7 @@ from drain3.template_miner_config import TemplateMinerConfig
 # Configuration de Drain3
 config = TemplateMinerConfig()
 
-# Définir les paramètres pour Drain3
+# Configuration de Drain3 avec ces paramètres
 config.snapshot_interval_minutes = 1
 config.persist_snapshot = True
 config.persist_state = True
@@ -16,6 +16,26 @@ config.tree_max_depth = 4
 config.min_similarity_threshold = 0.4
 config.max_clusters = 10000
 
+# Expression régulière pour les journaux Hadoop
+# 1. Remplace l'horodatage (format typique des journaux).
+# 2. Remplace le niveau de journalisation (INFO, WARN, ERROR, etc.).
+# 3. Remplace les parties dynamiques comme des identifiants ou des adresses spécifiques.
+config.profiling_enabled = False  # Désactiver le profiling pour accélérer le traitement
+config.custom_extractors = [
+    {
+        "regex": r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(,\d+)?",  # Horodatage
+        "replacement": "<*>",
+    },
+    {
+        "regex": r"(INFO|WARN|ERROR|DEBUG)",  # Niveau de journalisation
+        "replacement": "<*>",
+    },
+    {
+        "regex": r"appattempt_\d+_\d+_\d+",  # Identifiant dynamique
+        "replacement": "<*>",
+    },
+]
+
 persistence = FilePersistence("drain3_state.bin")
 template_miner = TemplateMiner(persistence, config)
 
@@ -23,11 +43,26 @@ template_miner = TemplateMiner(persistence, config)
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger(__name__)
 
+import re
+# Pre-processing
+def preprocess_log_line(log_line):
+    # Supprime l'horodatage
+    log_line = re.sub(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}", "", log_line)
+    # Supprime le niveau de journalisation
+    log_line = re.sub(r"\b(INFO|ERROR|WARN|DEBUG|TRACE)\b", "", log_line)
+    # Supprime le thread
+    log_line = re.sub(r"\[\w+\]", "", log_line)
+    # Supprime les espaces inutiles
+    log_line = re.sub(r"\s+", " ", log_line).strip()
+    return log_line
+
 def process_log_line(line):
     """
     Traitement de chaque ligne du fichier journal.
     """
-    result = template_miner.add_log_message(line)
+
+    clean_line=preprocess_log_line(line)
+    result = template_miner.add_log_message(clean_line)
 
     if result["change_type"] != "none":
         # Vérifie si la clé 'template' existe dans le résultat
@@ -110,28 +145,33 @@ def generate_event_matrix(template_miner):
 
     clusters_data = []  # Liste pour stocker les données extraites des clusters
 
-    # Extraction des données pertinentes de chaque cluster
-    for cluster in template_miner.drain.clusters:
-        clusters_data.append(cluster);
+    # Rassembler les données des clusters
+    for cluster in events:
+        clusters_data.append({
+            "Cluster ID": cluster.cluster_id,
+            "Size": cluster.size,
+            "Template": cluster.get_template()
+        })
 
     # Créer un DataFrame Pandas pour représenter la matrice des événements
     event_matrix = pd.DataFrame(clusters_data)
     
-    # Affichage de la matrice
-    print("Affichage de la matrice d'événements :")
-    print(event_matrix)
-
     # Enregistrer la matrice comme fichier CSV
     event_matrix.to_csv('event_matrix.csv', index=False)
 
     return event_matrix
 
-# Exemple d'utilisation de la fonction
+# Utilisation de la fonction generate_event_matrix
 event_matrix_df = generate_event_matrix(template_miner)
 
-# Calculer les statistiques de base
-event_counts = event_matrix_df.sum(axis=0)
-failure_events = event_matrix_df.columns[event_counts > 0]  # Supposons que les pannes sont identifiées par un certain seuil
+# Assurer que event_counts est une série numérique
+event_counts = event_matrix_df.sum(axis=0)  # Calculer les sommes des événements par colonne
+event_counts = pd.to_numeric(event_counts, errors='coerce')  # Convertir en numérique, NaN si non convertible
+
+# Identifier les colonnes où le nombre d'événements est supérieur à 0
+failure_events = event_counts[event_counts > 0].index
+print(f"Les événements avec des occurrences (échec) : {failure_events}")
+
 
 print("Événements liés aux pannes:")
 print(failure_events)
@@ -154,10 +194,18 @@ def plot_failure_distribution(event_counts):
     plt.ylabel('Nombre d\'occurrences')
     plt.title('Distribution des pannes')
 
-    # Extraire les numéros d'événements à partir des chaînes (par exemple, 'Event_1' -> 1)
-    event_numbers = [int(event.split('_')[1]) for event in failure_events]
+    # Extraire les numéros d'événements uniquement si le format est correct
+    event_numbers = []
+    for event in failure_events:
+        try:
+            # Extraire le numéro après "Event_"
+            if "_" in event:
+                event_numbers.append(int(event.split('_')[1]))
+        except (IndexError, ValueError):
+            # Ignorer les événements avec un format inattendu
+            continue
 
-    # Sélectionner les événements multiples de 5 (au lieu de 10)
+    # Sélectionner les événements multiples de 5
     event_labels = [f'Event_{number}' for number in event_numbers if number % 5 == 0]
     event_positions = [failure_events[i] for i, number in enumerate(event_numbers) if number % 5 == 0]
 
@@ -168,10 +216,6 @@ def plot_failure_distribution(event_counts):
 
 # Afficher les statistiques des pannes
 plot_failure_distribution(event_counts)
-
-# Afficher les statistiques des pannes
-plot_failure_distribution(event_counts)
-
 
 # Apprentissage avec modele de regression logistique
 import pandas as pd

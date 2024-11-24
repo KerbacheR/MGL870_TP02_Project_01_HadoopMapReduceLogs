@@ -1,0 +1,708 @@
+Cluster ID,Size,Template
+1,740,2015-10-17 <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: <*> <*> <*> <*> <*>
+2,232,2015-10-17 <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: <*> <*> <*>
+3,360,"<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: <*> cluster_timestamp: <*> } attemptId: <*> } keyId: <*>"
+4,3198,<*> <*> INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class <*> for class <*>
+5,3695,2015-10-17 <*> INFO [main] <*> <*> <*> system <*>
+6,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Emitting job history data to the timeline server is not enabled
+7,4900,<*> <*> INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+8,4900,<*> <*> INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+9,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Adding job token for <*> to jobTokenSecretManager
+10,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Not uberizing <*> because: not enabled; too many maps; too much input;
+11,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Input size for job <*> = <*> Number of splits = <*>
+12,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Number of reduces for job <*> = 1
+13,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: <*> Transitioned from NEW to INITED
+14,355,"<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: MRAppMaster launching normal, non-uberized, multi-container job <*>"
+15,710,<*> <*> INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue class java.util.concurrent.LinkedBlockingQueue
+16,710,<*> <*> INFO [Socket Reader #1 for port <*> org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port <*>
+17,355,<*> <*> INFO [main] org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server
+18,960,<*> <*> INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: <*> <*> <*> <*>
+19,960,<*> <*> INFO [IPC Server listener on <*> org.apache.hadoop.ipc.Server: <*> <*> <*> <*> <*> <*>
+20,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.client.MRClientService: Instantiated MRClientService at <*>
+21,400,2015-10-17 <*> INFO [main] <*> <*> to <*> <*> <*>
+22,355,<*> <*> INFO [main] org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.mapreduce is not defined
+23,400,2015-10-17 <*> INFO [main] org.apache.hadoop.http.HttpServer2: <*> <*> <*> <*> <*>
+24,710,<*> <*> INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context <*>
+25,710,<*> <*> INFO [main] org.apache.hadoop.http.HttpServer2: adding path spec: <*>
+26,400,2015-10-17 <*> INFO [main] <*> <*>
+27,355,<*> <*> INFO [main] org.mortbay.log: Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to <*>
+28,2770,2015-10-17 <*> INFO [main] <*> <*> <*>
+29,355,<*> <*> INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Web app /mapreduce started at <*>
+30,355,<*> <*> INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+31,5010,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: <*> <*>
+32,710,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: <*> is <*>
+33,355,"<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: maxContainerCapability: <memory:8192, vCores:32>"
+34,355,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Upper limit on the thread pool size is 500
+35,355,<*> <*> INFO [main] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: yarn.client.max-cached-nodemanagers-proxies : 0
+36,1225,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: <*> Transitioned from <*> to <*>
+37,1700,<*> <*> INFO [CommitterEvent Processor <*> org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: <*>
+38,11505,2015-10-17 <*> INFO [AsyncDispatcher event handler] <*> <*> <*> <*> <*>
+39,35595,<*> <*> INFO [AsyncDispatcher event handler] <*> <*> <*> Transitioned from <*> to <*>
+40,690,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> vCores:1>
+41,355,<*> <*> INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Event Writer setup for JobId: <*> File: <*>
+42,1600,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> <*> <*> <*> <*> CompletedReds:0 <*> ContRel:0 <*> RackLocal:0
+43,4575,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for <*> <*> release= <*> <*> <*> <*> <*> <*>
+44,29549,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+45,19345,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+46,4660,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container <*> to <*>
+47,710,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The <*> file on the remote FS is <*>
+48,355,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Adding #0 tokens and #1 secret keys for NM use for launching container
+49,2550,2015-10-17 <*> INFO [AsyncDispatcher event handler] <*> <*> <*> <*> <*> <*>
+50,8980,<*> <*> INFO [ContainerLauncher <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: <*> for container <*> taskAttempt <*>
+51,5315,2015-10-17 <*> INFO [ContainerLauncher <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: <*> <*>
+52,8980,<*> <*> INFO [ContainerLauncher <*> org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : <*>
+53,4660,<*> <*> INFO [ContainerLauncher <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Shuffle port returned by ContainerManager for <*> : 13562
+54,5295,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: <*> using containerId: <*> on NM: <*>
+55,4940,<*> <*> INFO [Socket Reader #1 for port <*> SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for <*> (auth:SIMPLE)
+56,4640,<*> <*> INFO [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID : <*> asked for a task
+57,146175,2015-10-17 <*> INFO [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> <*> <*>
+58,3135,<*> <*> INFO [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from <*>
+59,1295,<*> <*> INFO [DefaultSpeculator background processing] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: DefaultSpeculator.addSpeculativeAttempt -- we are speculating <*>
+60,1295,<*> <*> INFO [DefaultSpeculator background processing] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: We launched 1 speculations. Sleeping 15000 milliseconds.
+61,990,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Scheduling a redundant attempt for task <*>
+62,335,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold reached. Scheduling reduces.
+63,1055,"<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: completedMapPercent 0.1 <*> <*> <*> <*> <*> <*> <*> <*> netScheduledReduceResource:<memory:0, vCores:0>"
+64,580,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*>
+65,3785,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from <*> Container killed by the ApplicationMaster.
+66,3700,Container killed on request. Exit code is 137
+67,3700,Container exited with a non-zero exit code 137
+68,4505,
+69,91250,<*> <*> INFO [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: MapCompletionEvents request from <*> startIndex <*> maxEvents 10000
+70,80,<*> <*> WARN [ResponseProcessor for block <*> org.apache.hadoop.hdfs.DFSClient: DFSOutputStream ResponseProcessor exception for block <*>
+71,80,java.io.IOException: Bad response ERROR for block <*> from datanode <*>
+72,812425,at <*>
+73,80,<*> <*> WARN [DataStreamer for file <*> block <*> org.apache.hadoop.hdfs.DFSClient: Error Recovery for block <*> in pipeline <*> <*> bad datanode <*>
+74,930,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Issuing kill to other attempt <*>
+75,1080,<*> <*> WARN [CommitterEvent Processor <*> org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete <*>
+76,1105,<*> <*> INFO [Socket Reader #1 for port <*> org.apache.hadoop.ipc.Server: Socket Reader #1 for port <*> readAndProcess from client <*> threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]
+77,1110,java.io.IOException: An existing connection was forcibly closed by the remote host
+78,29575,at <*> Method)
+79,390,2015-10-17 <*> INFO [IPC Server handler <*> on <*> <*> <*> <*> <*> <*> <*>
+80,245,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: <*> given a go for committing the task output.
+81,260,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.MRAppMaster: We are finishing cleanly so this is the last retry
+82,540,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify <*> isAMLastRetry: <*>
+83,260,2015-10-17 <*> INFO <*> <*> <*> notified that <*> <*> true
+84,270,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Calling stop for all the services
+85,270,<*> <*> INFO <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopping JobHistoryEventHandler. Size of the outstanding queue size is <*>
+86,490,<*> <*> INFO <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying <*> to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging
+87,30,/history/done_intermediate/msrabi/job_1445062781478_0011-1445067474313-msrabi-pagerank-1445067766465-10-1-SUCCEEDED-default-1445067479468.jhist_tmp
+88,1150,<*> <*> INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: <*> <*> <*> <*> hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging
+89,30,/history/done_intermediate/msrabi/job_1445062781478_0011_conf.xml_tmp
+90,735,<*> to hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging
+91,15,/history/done_intermediate/msrabi/job_1445062781478_0011.summary
+92,15,/history/done_intermediate/msrabi/job_1445062781478_0011_conf.xml
+93,15,/history/done_intermediate/msrabi/job_1445062781478_0011-1445067474313-msrabi-pagerank-1445067766465-10-1-SUCCEEDED-default-1445067479468.jhist
+94,250,<*> <*> INFO <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopped JobHistoryEventHandler. super.stop()
+95,30,2015-10-17 <*> INFO [Thread-101] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+96,235,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Waiting for application to be successfully unregistered.
+97,236,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 <*> <*> <*> <*> <*> <*> <*>
+98,235,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Deleting staging directory hdfs://msra-sa-41:9000 <*>
+99,250,<*> <*> INFO <*> org.apache.hadoop.ipc.Server: Stopping server on <*>
+100,250,<*> <*> INFO [TaskHeartbeatHandler PingChecker] org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler: TaskHeartbeatHandler thread interrupted
+101,1696,2015-10-19 <*> INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: <*> <*> <*> <*>
+102,4890,<*> <*> INFO [main] <*> Executing with tokens:
+103,4545,"<*> <*> INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: <*> Ident: <*>"
+104,4545,<*> <*> INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+105,4535,<*> <*> INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: <*>
+106,4815,"<*> <*> INFO [main] org.apache.hadoop.conf.Configuration.deprecation: <*> is deprecated. Instead, use <*>"
+107,4525,<*> <*> INFO [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: ProcfsBasedProcessTree currently is supported only on Linux.
+108,4525,<*> <*> INFO [main] org.apache.hadoop.mapred.Task: Using ResourceCalculatorProcessTree : <*>
+109,96,2015-10-19 <*> INFO [main] <*> Using <*> <*>
+110,355,"<*> <*> INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: <*> <*> <*> ioSortFactor=10, memToMemMergeOutputsThreshold=10"
+111,355,<*> <*> INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: <*> Thread started: EventFetcher for fetching Map Completion Events
+112,2360,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning <*> with <*> to <*>
+113,2360,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned <*> of <*> to <*> to <*>
+114,2070,<*> <*> INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: <*> Got <*> new map-outputs
+115,2345,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.Fetcher: for <*> sent hash and received reply
+116,3335,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: <*> Shuffling to disk since <*> is greater than maxSingleShuffleLimit <*>
+117,3320,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.Fetcher: <*> about to shuffle output of map <*> decomp: <*> len: <*> to DISK
+118,3245,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.OnDiskMapOutput: Read <*> bytes from map-output for <*>
+119,2275,<*> <*> INFO <*> org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: <*> freed by <*> in <*>
+120,285,<*> <*> INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: <*> <*> <*> <*>
+121,280,<*> <*> INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: finalMerge called with 0 in-memory map-outputs and <*> on-disk map-outputs
+122,280,"<*> <*> INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging <*> files, <*> bytes from disk"
+123,280,"<*> <*> INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce"
+124,3390,<*> <*> INFO [main] org.apache.hadoop.mapred.Merger: Merging <*> sorted segments
+125,3390,"<*> <*> INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with <*> segments left of total size: <*> bytes"
+126,3125,<*> <*> INFO [main] org.apache.hadoop.mapred.Task: <*> is done. And is in the process of committing
+127,240,<*> <*> INFO [main] org.apache.hadoop.mapred.Task: Task <*> is allowed to commit now
+128,240,<*> <*> INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Saved output of task <*> to <*>
+129,3080,<*> <*> INFO [main] org.apache.hadoop.mapred.Task: Task <*> done.
+130,1585,<*> <*> INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: <*> metrics system shutdown complete.
+131,8725,2015-10-19 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*>
+132,8125,2015-10-19 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*> <*>
+133,1230,2015-10-19 <*> INFO [main] <*> <*> <*>
+134,3120,2015-10-19 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*> <*> = <*>
+135,53390,<*> <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> = <*> <*> = <*> <*> = <*>
+136,25210,<*> <*> INFO <*> org.apache.hadoop.mapred.MapTask: Finished spill <*>
+137,22895,<*> <*> INFO [main] org.apache.hadoop.mapred.MapTask: (RESET) equator <*> kv <*> kvi <*>
+138,3220,<*> <*> INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+139,285,2015-10-19 <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: <*> <*> <*> <*> <*>
+140,345,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+141,1130,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://msra-sa-41:9000]
+142,190,2015-10-19 <*> INFO [main] <*> <*> to <*> <*> <*>
+143,190,2015-10-19 <*> INFO [main] org.apache.hadoop.http.HttpServer2: <*> <*> <*> <*> <*>
+144,190,2015-10-19 <*> INFO [main] <*> <*>
+145,4835,2015-10-19 <*> INFO [AsyncDispatcher event handler] <*> <*> <*> <*> <*>
+146,1100,2015-10-19 <*> INFO [AsyncDispatcher event handler] <*> <*> <*> <*> <*> <*>
+147,2235,2015-10-19 <*> INFO [ContainerLauncher <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: <*> <*>
+148,61010,2015-10-19 <*> INFO [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> <*> <*>
+149,215,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: All maps assigned. Ramping up all remaining reduces:1
+150,210,2015-10-19 <*> INFO [IPC Server handler <*> on <*> <*> <*> <*> <*> <*> <*>
+151,422,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> ScheduledReds:0 AssignedMaps:0 <*> <*> <*> <*> ContRel:0 <*> <*>
+152,140,2015-10-19 <*> INFO <*> <*> <*> notified that <*> <*> true
+153,10,/history/done_intermediate/msrabi/job_1445182159119_0001-1445235687678-msrabi-word+count-1445236299685-10-1-SUCCEEDED-default-1445235697856.jhist_tmp
+154,10,/history/done_intermediate/msrabi/job_1445182159119_0001_conf.xml_tmp
+155,5,/history/done_intermediate/msrabi/job_1445182159119_0001.summary
+156,5,/history/done_intermediate/msrabi/job_1445182159119_0001_conf.xml
+157,5,/history/done_intermediate/msrabi/job_1445182159119_0001-1445235687678-msrabi-word+count-1445236299685-10-1-SUCCEEDED-default-1445235697856.jhist
+158,10,"2015-10-19 14:31:55,905 INFO [Thread-105] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+159,1139,2015-10-18 <*> INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: <*> <*> <*> <*>
+160,5670,2015-10-18 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*>
+161,5855,2015-10-18 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*> <*>
+162,880,2015-10-18 <*> INFO [main] <*> <*> <*>
+163,2280,2015-10-18 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*> <*> = <*>
+164,20,<*> <*> WARN [main] org.apache.hadoop.mapred.Task: Failure sending status update: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>
+165,113435,at <*> Source)
+166,275,Caused by: java.io.IOException: An existing connection was forcibly closed by the remote host
+167,220,<*> <*> INFO [communication thread] org.apache.hadoop.mapred.Task: Communication exception: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>
+168,935,<*> <*> INFO <*> org.apache.hadoop.ipc.Client: Retrying connect to server: <*> Already tried <*> time(s); maxRetries=45
+169,11650,<*> <*> INFO <*> <*> org.apache.hadoop.ipc.Client: Retrying connect to server: <*> Already tried <*> time(s); maxRetries=45
+170,80,<*> <*> WARN [main] org.apache.hadoop.hdfs.BlockReaderFactory: I/O error constructing remote block reader.
+171,100,java.net.NoRouteToHostException: No route to host: no further information
+172,50,"2015-10-18 <*> WARN [main] org.apache.hadoop.hdfs.DFSClient: Failed to connect to <*> for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"
+173,25,"2015-10-18 <*> INFO [main] org.apache.hadoop.hdfs.DFSClient: Could not obtain <*> from any node: java.io.IOException: No live nodes contain block <*> after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010. Will get new block locations from namenode and retry..."
+174,30,"2015-10-18 <*> WARN [main] org.apache.hadoop.hdfs.DFSClient: DFS chooseDataNode: got # 1 IOException, will wait for <*> msec."
+175,26560,<*> <*> WARN <*> org.apache.hadoop.ipc.Client: Address change detected. Old: <*> New: <*>
+176,20,2015-10-18 <*> WARN <*> org.apache.hadoop.hdfs.DFSClient: <*> <*>
+177,26515,java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+178,26650,Caused by: java.net.NoRouteToHostException: No route to host: no further information
+179,31745,... <*> more
+180,10,2015-10-18 <*> WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+181,62,2015-10-18 <*> INFO [main] <*> <*> <*> for <*> <*>
+182,60,2015-10-18 <*> INFO <*> <*> <*> <*> <*> java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to <*> failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+183,61,2015-10-18 <*> INFO [main] <*> Using <*> <*>
+184,115,2015-10-18 <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: <*> <*> <*> <*> <*>
+185,120,2015-10-18 <*> INFO [main] <*> <*> to <*> <*> <*>
+186,120,2015-10-18 <*> INFO [main] org.apache.hadoop.http.HttpServer2: <*> <*> <*> <*> <*>
+187,120,2015-10-18 <*> INFO [main] <*> <*>
+188,3155,2015-10-18 <*> INFO [AsyncDispatcher event handler] <*> <*> <*> <*> <*>
+189,12,2015-10-18 <*> INFO [RMCommunicator Allocator] <*> <*> <*> <*> <*>
+190,222,2015-10-18 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> <*> <*> AssignedReds:0 <*> CompletedReds:0 <*> <*> <*> <*>
+191,675,2015-10-18 <*> INFO [AsyncDispatcher event handler] <*> <*> <*> <*> <*> <*>
+192,1430,2015-10-18 <*> INFO [ContainerLauncher <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: <*> <*>
+193,32925,2015-10-18 <*> INFO [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> <*> <*>
+194,60,"<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Cannot assign container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: <*> Token: Token { kind: ContainerToken, service: <*> }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true"
+195,95,<*> <*> ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container id <*>
+196,26500,<*> <*> WARN [LeaseRenewer:msrabi@msra-sa-41:9000] org.apache.hadoop.hdfs.LeaseRenewer: Failed to renew lease for <*> for <*> seconds. Will retry shortly ...
+197,45,"<*> <*> WARN [ResponseProcessor for block <*> org.apache.hadoop.hdfs.DFSClient: Slow ReadProcessor read fields took <*> (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: <*> <*>"
+198,10,2015-10-18 <*> WARN [DataStreamer for file <*> block <*> org.apache.hadoop.ipc.Client: Address change detected. Old: msra-sa-41/10.190.173.170:9000 New: msra-sa-41:9000
+199,10,2015-10-18 <*> WARN [DataStreamer for file <*> block <*> org.apache.hadoop.hdfs.DFSClient: DataStreamer Exception
+200,2400,<*> <*> ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: ERROR IN CONTACTING RM.
+201,35,java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: <*> destination host is: <*>
+202,2395,<*> <*> WARN [RMCommunicator Allocator] org.apache.hadoop.ipc.Client: Address change detected. Old: msra-sa-41/10.190.173.170:8030 New: msra-sa-41:8030
+203,5195,"<*> <*> INFO <*> <*> org.apache.hadoop.ipc.Client: Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)"
+204,2435,java.io.IOException: Failed on local exception: <*> <*> <*> <*> <*> <*> Host Details : local host is: <*> destination host is: <*>
+205,2395,Caused by: java.io.IOException: Couldn't set up IO streams
+206,2415,Caused by: <*>
+207,20,2015-10-18 <*> <*> [IPC Server handler <*> on 62270] org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+208,15,2015-10-18 <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+209,10,2015-10-18 <*> WARN [CommitterEvent Processor <*> org.apache.hadoop.ipc.Client: Address change detected. Old: msra-sa-41/10.190.173.170:9000 New: msra-sa-41:9000
+210,10,2015-10-18 <*> WARN [CommitterEvent Processor <*> org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Task cleanup failed for attempt <*>
+211,2,"2015-10-18 18:06:26,139 ERROR [eventHandlingThread] <*> <*> <*> <*> <*> <*>"
+212,35,org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+213,35,Caused by: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+214,50,<*> <*> INFO [Thread-50] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: <*> failures on node <*>
+215,50,<*> <*> INFO [Thread-50] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added <*> to list of failed maps
+216,15,2015-10-18 <*> ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Could not contact RM after 360000 milliseconds.
+217,15,2015-10-18 <*> ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Error communicating with RM: Could not contact RM after 360000 milliseconds.
+218,15,org.apache.hadoop.yarn.exceptions.YarnRuntimeException: Could not contact RM after 360000 milliseconds.
+219,120,2015-10-18 <*> INFO <*> <*> <*> notified that <*> <*> true
+220,30,"<*> <*> INFO <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: In stop, writing event <*>"
+221,10,2015-10-18 <*> INFO [Thread-560] org.apache.hadoop.service.AbstractService: Service <*> failed in state STOPPED; cause: org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.
+222,20,org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected.
+223,5,"2015-10-18 18:10:58,562 WARN [Thread-560] org.apache.hadoop.service.CompositeService: When stopping the service JobHistoryEventHandler : org.apache.avro.AvroTypeException: Attempt to process a enum when a union was expected."
+224,65,<*> <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: KILLING <*>
+225,65,<*> <*> INFO <*> org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : <*>
+226,60,2015-10-18 <*> WARN <*> org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>
+227,120,Caused by: java.net.UnknownHostException: <*>
+228,60,2015-10-18 <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from <*> cleanup failed for container <*> : java.lang.IllegalArgumentException: java.net.UnknownHostException: <*>
+229,10,"2015-10-18 18:10:58,593 INFO [Thread-560] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+230,45,"<*> <*> INFO <*> org.apache.hadoop.ipc.Client: Retrying connect to server: <*> Already tried <*> time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)"
+231,15,2015-10-18 <*> ERROR <*> org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Exception while unregistering
+232,5,"2015-10-18 18:10:59,593 INFO [Thread-560] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: PendingReds:0 ScheduledMaps:3 ScheduledReds:1 AssignedMaps:9 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:11 ContRel:1 HostLocal:7 RackLocal:3"
+233,15,2015-10-18 <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Skipping cleaning up the staging dir. assuming AM will be retried.
+234,15,2015-10-18 <*> WARN <*> org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Graceful stop failed
+235,40,Caused by: java.net.SocketException: Permission denied: no further information
+236,75,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Recovery is enabled. Will try to recover from previous life on best effort basis.
+237,95,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Previous history file is at <*>
+238,55,<*> <*> INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Read completed tasks from history <*>
+239,480,"<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Recovering task <*> from prior app attempt, status was SUCCEEDED"
+240,3999,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> ScheduledReds:0 <*> <*> <*> CompletedReds:0 <*> ContRel:0 <*> <*>
+241,135,2015-10-18 <*> INFO [IPC Server handler <*> on <*> <*> <*> <*> <*> <*> <*>
+242,10,/history/done_intermediate/msrabi/job_1445144423722_0020-1445162504986-msrabi-pagerank-1445164035248-10-1-SUCCEEDED-default-1445162513713.jhist_tmp
+243,10,/history/done_intermediate/msrabi/job_1445144423722_0020_conf.xml_tmp
+244,5,/history/done_intermediate/msrabi/job_1445144423722_0020.summary
+245,5,/history/done_intermediate/msrabi/job_1445144423722_0020_conf.xml
+246,5,/history/done_intermediate/msrabi/job_1445144423722_0020-1445162504986-msrabi-pagerank-1445164035248-10-1-SUCCEEDED-default-1445162513713.jhist
+247,10,2015-10-18 <*> INFO [Thread-116] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+248,17280,2015-10-17 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*>
+249,17900,2015-10-17 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*> <*>
+250,7110,2015-10-17 <*> INFO [main] org.apache.hadoop.mapred.MapTask: <*> <*> <*> <*> = <*>
+251,353,<*> <*> INFO [main] org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: <*>
+252,1570,<*> <*> INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping <*> metrics system...
+253,1304,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.yarn.util.RackResolver: Resolved <*> to /default-rack
+254,413,2015-10-17 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: PendingReds:0 <*> <*> <*> <*> <*> <*> <*> ContRel:0 <*> <*>
+255,10,/history/done_intermediate/msrabi/job_1445094324383_0001-1445094472971-msrabi-word+count-1445095231162-10-1-SUCCEEDED-default-1445094488479.jhist_tmp
+256,10,/history/done_intermediate/msrabi/job_1445094324383_0001_conf.xml_tmp
+257,5,/history/done_intermediate/msrabi/job_1445094324383_0001.summary
+258,5,/history/done_intermediate/msrabi/job_1445094324383_0001_conf.xml
+259,5,/history/done_intermediate/msrabi/job_1445094324383_0001-1445094472971-msrabi-word+count-1445095231162-10-1-SUCCEEDED-default-1445094488479.jhist
+260,10,2015-10-17 <*> INFO [Thread-112] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+261,500,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Ramping down all scheduled reduces:0
+262,500,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Going to preempt 1 due to lack of space for maps
+263,615,"2015-10-18 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: completedMapPercent 0.2 <*> <*> <*> <*> <*> <*> <*> <*> netScheduledReduceResource:<memory:0, vCores:0>"
+264,10,/history/done_intermediate/msrabi/job_1445144423722_0024-1445162508959-msrabi-pagerank-1445163619058-10-1-SUCCEEDED-default-1445162981270.jhist_tmp
+265,10,/history/done_intermediate/msrabi/job_1445144423722_0024_conf.xml_tmp
+266,5,/history/done_intermediate/msrabi/job_1445144423722_0024.summary
+267,5,/history/done_intermediate/msrabi/job_1445144423722_0024_conf.xml
+268,5,/history/done_intermediate/msrabi/job_1445144423722_0024-1445162508959-msrabi-pagerank-1445163619058-10-1-SUCCEEDED-default-1445162981270.jhist
+269,10,"2015-10-18 18:20:22,979 INFO [Thread-111] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+270,10,2015-10-17 <*> INFO [Thread-71] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+271,150,java.io.IOException: Bad connect ack with firstBadLink as <*>
+272,100,<*> <*> INFO <*> org.apache.hadoop.hdfs.DFSClient: Abandoning <*>
+273,50,java.net.ConnectException: Connection timed out: no further information
+274,25,"<*> <*> WARN [main] org.apache.hadoop.hdfs.DFSClient: Failed to connect to <*> for block, add to deadNodes and continue. java.net.ConnectException: Connection timed out: no further information"
+275,30,<*> <*> INFO [main] org.apache.hadoop.hdfs.DFSClient: Successfully connected to <*> for <*>
+276,35,"<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Releasing unassigned and invalid container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: <*> }, ]. RM may have assignment issues"
+277,752,2015-10-17 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> <*> <*> <*> <*> CompletedReds:0 <*> ContRel:1 <*> <*>
+278,10,/history/done_intermediate/msrabi/job_1445076437777_0005-1445076558325-msrabi-pagerank-1445077274793-10-1-SUCCEEDED-default-1445076957160.jhist_tmp
+279,10,/history/done_intermediate/msrabi/job_1445076437777_0005_conf.xml_tmp
+280,5,/history/done_intermediate/msrabi/job_1445076437777_0005.summary
+281,5,/history/done_intermediate/msrabi/job_1445076437777_0005_conf.xml
+282,5,/history/done_intermediate/msrabi/job_1445076437777_0005-1445076558325-msrabi-pagerank-1445077274793-10-1-SUCCEEDED-default-1445076957160.jhist
+283,10,"2015-10-17 18:21:15,387 INFO [Thread-106] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+284,125,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: TaskAttempt killed because it ran on unusable node <*> <*>
+285,10,/history/done_intermediate/msrabi/job_1445087491445_0002-1445088243318-msrabi-word+count-1445091063334-13-1-SUCCEEDED-default-1445088256684.jhist_tmp
+286,10,/history/done_intermediate/msrabi/job_1445087491445_0002_conf.xml_tmp
+287,5,/history/done_intermediate/msrabi/job_1445087491445_0002.summary
+288,5,/history/done_intermediate/msrabi/job_1445087491445_0002_conf.xml
+289,5,/history/done_intermediate/msrabi/job_1445087491445_0002-1445088243318-msrabi-word+count-1445091063334-13-1-SUCCEEDED-default-1445088256684.jhist
+290,10,2015-10-17 <*> INFO [Thread-91] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+291,420,<*> <*> INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of <*> map-task: <*>
+292,35,2015-10-17 <*> INFO [main] org.apache.hadoop.mapred.Merger: Merging 4 intermediate segments out of a total of 13
+293,100,<*> <*> INFO [DataStreamer for file <*> org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+294,50,<*> <*> INFO [DataStreamer for file <*> org.apache.hadoop.hdfs.DFSClient: Abandoning <*>
+295,5,"2015-10-17 21:49:33,809 INFO [communication thread] org.apache.hadoop.mapred.Task: Communication exception: java.net.ConnectException: Call From MSRA-SA-39/172.22.149.145 to minint-fnanli5.fareast.corp.microsoft.com:49594 failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused"
+296,5,Caused by: java.net.ConnectException: Connection timed out: no further information
+297,975,"2015-10-17 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: completedMapPercent <*> <*> <*> <*> <*> <*> <*> <*> <*> netScheduledReduceResource:<memory:0, vCores:0>"
+298,275,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Killing <*> because it is running on unusable <*>
+299,310,<*> <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from <*> <*> <*> <*> <*> <*> <*>
+300,152,2015-10-19 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: PendingReds:0 <*> <*> <*> <*> <*> <*> <*> ContRel:0 <*> <*>
+301,10,/history/done_intermediate/msrabi/job_1445182159119_0011-1445240987301-msrabi-pagerank-1445241443017-10-1-SUCCEEDED-default-1445240997344.jhist_tmp
+302,10,/history/done_intermediate/msrabi/job_1445182159119_0011_conf.xml_tmp
+303,5,/history/done_intermediate/msrabi/job_1445182159119_0011.summary
+304,5,/history/done_intermediate/msrabi/job_1445182159119_0011_conf.xml
+305,5,/history/done_intermediate/msrabi/job_1445182159119_0011-1445240987301-msrabi-pagerank-1445241443017-10-1-SUCCEEDED-default-1445240997344.jhist
+306,10,"2015-10-19 15:57:27,736 INFO [Thread-112] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+307,10,/history/done_intermediate/msrabi/job_1445076437777_0002-1445076557428-msrabi-pagerank-1445076863096-10-1-SUCCEEDED-default-1445076564680.jhist_tmp
+308,10,/history/done_intermediate/msrabi/job_1445076437777_0002_conf.xml_tmp
+309,5,/history/done_intermediate/msrabi/job_1445076437777_0002.summary
+310,5,/history/done_intermediate/msrabi/job_1445076437777_0002_conf.xml
+311,5,/history/done_intermediate/msrabi/job_1445076437777_0002-1445076557428-msrabi-pagerank-1445076863096-10-1-SUCCEEDED-default-1445076564680.jhist
+312,10,"2015-10-17 18:14:34,299 INFO [Thread-98] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+313,10,/history/done_intermediate/msrabi/job_1445062781478_0020-1445073079681-msrabi-pagerank-1445073609167-10-1-SUCCEEDED-default-1445073321328.jhist_tmp
+314,10,/history/done_intermediate/msrabi/job_1445062781478_0020_conf.xml_tmp
+315,5,/history/done_intermediate/msrabi/job_1445062781478_0020.summary
+316,5,/history/done_intermediate/msrabi/job_1445062781478_0020_conf.xml
+317,5,/history/done_intermediate/msrabi/job_1445062781478_0020-1445073079681-msrabi-pagerank-1445073609167-10-1-SUCCEEDED-default-1445073321328.jhist
+318,30,2015-10-17 <*> INFO [Thread-104] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+319,10,"2015-10-19 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: completedMapPercent <*> <*> vCores:-8> <*> <*> <*> <*> <*> <*> netScheduledReduceResource:<memory:0, vCores:0>"
+320,10,/history/done_intermediate/msrabi/job_1445182159119_0014-1445240989463-msrabi-pagerank-1445241794508-10-1-SUCCEEDED-default-1445240998871.jhist_tmp
+321,10,/history/done_intermediate/msrabi/job_1445182159119_0014_conf.xml_tmp
+322,5,/history/done_intermediate/msrabi/job_1445182159119_0014.summary
+323,5,/history/done_intermediate/msrabi/job_1445182159119_0014_conf.xml
+324,5,/history/done_intermediate/msrabi/job_1445182159119_0014-1445240989463-msrabi-pagerank-1445241794508-10-1-SUCCEEDED-default-1445240998871.jhist
+325,10,"2015-10-19 16:03:14,992 INFO [Thread-79] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+326,10,2015-10-19 <*> WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in <*>
+327,85,Caused by: org.apache.hadoop.fs.FSError: java.io.IOException: There is not enough space on the disk
+328,90,Caused by: java.io.IOException: There is not enough space on the disk
+329,28,<*> <*> INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task
+330,10,2015-10-19 <*> ERROR <*> org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Shuffle failed : local error on this node: 04DN8IQ/10.86.164.138
+331,20,2015-10-19 <*> WARN [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete <*>
+332,20,2015-10-19 <*> <*> [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in <*>
+333,10,2015-10-19 <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from <*> Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in <*>
+334,10,/history/done_intermediate/msrabi/job_1445094324383_0004-1445094473098-msrabi-word+count-1445096128795-10-1-SUCCEEDED-default-1445094484150.jhist_tmp
+335,10,/history/done_intermediate/msrabi/job_1445094324383_0004_conf.xml_tmp
+336,5,/history/done_intermediate/msrabi/job_1445094324383_0004.summary
+337,5,/history/done_intermediate/msrabi/job_1445094324383_0004_conf.xml
+338,5,/history/done_intermediate/msrabi/job_1445094324383_0004-1445094473098-msrabi-word+count-1445096128795-10-1-SUCCEEDED-default-1445094484150.jhist
+339,10,"2015-10-17 23:35:33,576 INFO [Thread-155] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+340,10,"2015-10-19 14:26:28,977 <*> [IPC Server handler 10 on 49792] org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+341,5,"2015-10-19 14:26:28,977 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1445182159119_0002_m_000007_0: Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+342,10,/history/done_intermediate/msrabi/job_1445182159119_0002-1445235687677-msrabi-word+count-1445236914959-10-1-SUCCEEDED-default-1445235697502.jhist_tmp
+343,10,/history/done_intermediate/msrabi/job_1445182159119_0002_conf.xml_tmp
+344,5,/history/done_intermediate/msrabi/job_1445182159119_0002.summary
+345,5,/history/done_intermediate/msrabi/job_1445182159119_0002_conf.xml
+346,5,/history/done_intermediate/msrabi/job_1445182159119_0002-1445235687677-msrabi-word+count-1445236914959-10-1-SUCCEEDED-default-1445235697502.jhist
+347,10,2015-10-19 <*> INFO [Thread-86] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+348,5,"2015-10-19 14:26:28,852 INFO [main] org.apache.hadoop.mapred.MapTask: Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@6a6585ee"
+349,5,java.lang.NullPointerException
+350,5,"2015-10-19 14:26:28,867 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1445182159119_0002_m_000007_0/file.out"
+351,20,2015-10-17 <*> INFO [Thread-56] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+352,506,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 <*> <*> <*> <*> <*> <*> <*> <*>
+353,10,/history/done_intermediate/msrabi/job_1445062781478_0015-1445067477119-msrabi-pagerank-1445068216511-10-1-SUCCEEDED-default-1445067831801.jhist_tmp
+354,10,2015-10-17 <*> INFO [Thread-107] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+355,10,/history/done_intermediate/msrabi/job_1445062781478_0015_conf.xml_tmp
+356,10,2015-10-17 <*> INFO [Thread-110] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+357,5,/history/done_intermediate/msrabi/job_1445062781478_0015.summary
+358,5,/history/done_intermediate/msrabi/job_1445062781478_0015_conf.xml
+359,5,/history/done_intermediate/msrabi/job_1445062781478_0015-1445067477119-msrabi-pagerank-1445068216511-10-1-SUCCEEDED-default-1445067831801.jhist
+360,10,/history/done_intermediate/msrabi/job_1445175094696_0002-1445175179003-msrabi-word+count-1445175914697-10-1-SUCCEEDED-default-1445175187699.jhist_tmp
+361,10,2015-10-18 <*> INFO [Thread-123] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+362,10,/history/done_intermediate/msrabi/job_1445175094696_0002_conf.xml_tmp
+363,5,/history/done_intermediate/msrabi/job_1445175094696_0002.summary
+364,5,/history/done_intermediate/msrabi/job_1445175094696_0002_conf.xml
+365,5,/history/done_intermediate/msrabi/job_1445175094696_0002-1445175179003-msrabi-word+count-1445175914697-10-1-SUCCEEDED-default-1445175187699.jhist
+366,10,"2015-10-18 21:45:36,276 INFO [Thread-120] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+367,10,2015-10-17 <*> INFO [Thread-34] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+368,20,"<*> <*> WARN [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Unable to parse prior job history, aborting recovery"
+369,40,java.io.IOException: Incompatible event log version: null
+370,20,<*> <*> WARN [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Could not parse the old history file. Will not have old AMinfos
+371,10,/history/done_intermediate/msrabi/job_1445144423722_0023-1445162506952-msrabi-pagerank-1445163783933-10-1-SUCCEEDED-default-1445163429025.jhist_tmp
+372,10,/history/done_intermediate/msrabi/job_1445144423722_0023_conf.xml_tmp
+373,5,/history/done_intermediate/msrabi/job_1445144423722_0023.summary
+374,5,/history/done_intermediate/msrabi/job_1445144423722_0023_conf.xml
+375,5,/history/done_intermediate/msrabi/job_1445144423722_0023-1445162506952-msrabi-pagerank-1445163783933-10-1-SUCCEEDED-default-1445163429025.jhist
+376,10,2015-10-18 <*> INFO [Thread-110] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+377,5,"2015-10-18 18:10:56,874 ERROR [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Error closing writer for JobID: job_1445144423722_0023"
+378,14,"2015-10-18 <*> ERROR [eventHandlingThread] org.apache.hadoop.yarn.YarnUncaughtExceptionHandler: Thread Thread[eventHandlingThread,5,main] threw an Exception."
+379,10,2015-10-18 <*> WARN <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Found jobId <*> to have not been closed. Will close
+380,19,2015-10-18 <*> ERROR <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Error writing History Event: <*>
+381,5,java.nio.channels.ClosedChannelException
+382,10,2015-10-18 <*> INFO [Thread-581] org.apache.hadoop.service.AbstractService: Service <*> failed in state STOPPED; cause: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.nio.channels.ClosedChannelException
+383,20,org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.nio.channels.ClosedChannelException
+384,5,"2015-10-18 18:10:56,890 WARN [Thread-581] org.apache.hadoop.service.CompositeService: When stopping the service JobHistoryEventHandler : org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.nio.channels.ClosedChannelException"
+385,10,"2015-10-18 18:10:56,905 INFO [Thread-581] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+386,9,2015-10-18 <*> INFO <*> org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: <*> <*> ScheduledReds:0 <*> AssignedReds:0 <*> <*> <*> ContRel:0 <*> RackLocal:1
+387,10,/history/done_intermediate/msrabi/job_1445087491445_0006-1445091992888-msrabi-word+count-1445093780514-10-1-SUCCEEDED-default-1445092006078.jhist_tmp
+388,10,/history/done_intermediate/msrabi/job_1445087491445_0006_conf.xml_tmp
+389,5,/history/done_intermediate/msrabi/job_1445087491445_0006.summary
+390,5,/history/done_intermediate/msrabi/job_1445087491445_0006_conf.xml
+391,5,/history/done_intermediate/msrabi/job_1445087491445_0006-1445091992888-msrabi-word+count-1445093780514-10-1-SUCCEEDED-default-1445092006078.jhist
+392,20,2015-10-17 <*> INFO [Thread-78] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+393,5,"2015-10-17 21:50:55,841 ERROR [fetcher#3] org.apache.hadoop.mapreduce.task.reduce.Fetcher: Connection retry failed with 4 attempts in 180 seconds"
+394,5,"2015-10-17 21:50:55,842 WARN [fetcher#3] org.apache.hadoop.mapreduce.task.reduce.Fetcher: Failed to connect to MININT-FNANLI5.fareast.corp.microsoft.com:13562 with 1 map outputs"
+395,5,java.net.ConnectException: Connection timed out: connect
+396,5,"2015-10-17 21:50:55,848 INFO [fetcher#3] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Reporting fetch failure for attempt_1445087491445_0004_m_000005_0 to jobtracker."
+397,5,"2015-10-17 21:51:34,611 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Preempting attempt_1445087491445_0004_r_000000_1000"
+398,5,"2015-10-17 21:51:35,614 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: completedMapPercent 0.9230769 totalResourceLimit:<memory:1024, vCores:-12> finalMapResourceLimit:<memory:512, vCores:-6> finalReduceResourceLimit:<memory:512, vCores:-6> netScheduledMapResource:<memory:1024, vCores:1> netScheduledReduceResource:<memory:1024, vCores:1>"
+399,10,/history/done_intermediate/msrabi/job_1445087491445_0004-1445088243078-msrabi-word+count-1445090594569-13-1-SUCCEEDED-default-1445088253210.jhist_tmp
+400,10,/history/done_intermediate/msrabi/job_1445087491445_0004_conf.xml_tmp
+401,5,/history/done_intermediate/msrabi/job_1445087491445_0004.summary
+402,5,/history/done_intermediate/msrabi/job_1445087491445_0004_conf.xml
+403,5,/history/done_intermediate/msrabi/job_1445087491445_0004-1445088243078-msrabi-word+count-1445090594569-13-1-SUCCEEDED-default-1445088253210.jhist
+404,10,"2015-10-17 22:03:14,960 INFO [Thread-113] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+405,15,2015-10-17 <*> INFO [Thread-50] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Processing the event EventType: CONTAINER_DEALLOCATE
+406,10,2015-10-17 <*> ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Error communicating with RM: Resource Manager doesn't recognize AttemptId: <*>
+407,10,org.apache.hadoop.yarn.exceptions.YarnRuntimeException: Resource Manager doesn't recognize AttemptId: <*>
+408,20,Caused by: <*> Application attempt <*> doesn't exist in ApplicationMasterService cache.
+409,20,2015-10-17 <*> INFO <*> <*> <*> notified that <*> <*> false
+410,102,2015-10-17 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> <*> <*> <*> <*> CompletedReds:0 <*> ContRel:2 <*> <*>
+411,10,/history/done_intermediate/msrabi/job_1445076437777_0003-1445076558237-msrabi-pagerank-1445077068938-10-1-SUCCEEDED-default-1445076564396.jhist_tmp
+412,10,2015-10-17 <*> INFO [Thread-115] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+413,10,/history/done_intermediate/msrabi/job_1445076437777_0003_conf.xml_tmp
+414,5,/history/done_intermediate/msrabi/job_1445076437777_0003.summary
+415,5,/history/done_intermediate/msrabi/job_1445076437777_0003_conf.xml
+416,5,/history/done_intermediate/msrabi/job_1445076437777_0003-1445076558237-msrabi-pagerank-1445077068938-10-1-SUCCEEDED-default-1445076564396.jhist
+417,10,2015-10-17 <*> INFO [Thread-96] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+418,5,"2015-10-19 14:26:43,649 FATAL [main] org.apache.hadoop.mapred.Task: Task attempt_1445182159119_0004_m_000004_0 failed : org.apache.hadoop.fs.FSError: java.io.IOException: There is not enough space on the disk"
+419,22,2015-10-19 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: <*> <*> <*> <*> <*> <*> CompletedReds:0 <*> <*> HostLocal:6 <*>
+420,70,2015-10-19 <*> <*> [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> java.io.IOException: There is not enough space on the disk
+421,40,2015-10-19 <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from <*> <*> java.io.IOException: There is not enough space on the disk
+422,10,2015-10-19 <*> FATAL [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: Task: <*> - failed due to FSError: java.io.IOException: There is not enough space on the disk
+423,30,2015-10-19 <*> <*> [IPC Server handler <*> on <*> org.apache.hadoop.mapred.TaskAttemptListenerImpl: <*> <*> <*> <*> <*> java.io.IOException: Spill failed
+424,15,2015-10-19 <*> INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from <*> Error: java.io.IOException: Spill failed
+425,40,"2015-10-19 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigning container Container: [ContainerId: <*> NodeId: <*> NodeHttpAddress: <*> Resource: <memory:1024, vCores:1>, Priority: 5, Token: Token { kind: ContainerToken, service: <*> }, ] to fast fail map"
+426,10,/history/done_intermediate/msrabi/job_1445182159119_0004-1445235687925-msrabi-word+count-1445236895250-10-1-SUCCEEDED-default-1445235702927.jhist_tmp
+427,50,2015-10-19 <*> INFO <*> org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: <*> <*> <*> <*> hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging
+428,10,/history/done_intermediate/msrabi/job_1445182159119_0004_conf.xml_tmp
+429,5,/history/done_intermediate/msrabi/job_1445182159119_0004.summary
+430,5,/history/done_intermediate/msrabi/job_1445182159119_0004_conf.xml
+431,5,/history/done_intermediate/msrabi/job_1445182159119_0004-1445235687925-msrabi-word+count-1445236895250-10-1-SUCCEEDED-default-1445235702927.jhist
+432,10,2015-10-19 <*> INFO [Thread-137] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+433,10,/history/done_intermediate/msrabi/job_1445087491445_0008-1445091993800-msrabi-word+count-1445093428949-10-1-SUCCEEDED-default-1445092006219.jhist_tmp
+434,10,/history/done_intermediate/msrabi/job_1445087491445_0008_conf.xml_tmp
+435,5,/history/done_intermediate/msrabi/job_1445087491445_0008.summary
+436,5,/history/done_intermediate/msrabi/job_1445087491445_0008_conf.xml
+437,5,/history/done_intermediate/msrabi/job_1445087491445_0008-1445091993800-msrabi-word+count-1445093428949-10-1-SUCCEEDED-default-1445092006219.jhist
+438,10,2015-10-17 <*> INFO [Thread-24] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+439,20,2015-10-19 <*> INFO [Thread-54] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+440,10,/history/done_intermediate/msrabi/job_1445182159119_0019-1445247552638-msrabi-pagerank-1445248878331-10-1-SUCCEEDED-default-1445248388426.jhist_tmp
+441,10,/history/done_intermediate/msrabi/job_1445182159119_0019_conf.xml_tmp
+442,5,/history/done_intermediate/msrabi/job_1445182159119_0019.summary
+443,5,/history/done_intermediate/msrabi/job_1445182159119_0019_conf.xml
+444,5,/history/done_intermediate/msrabi/job_1445182159119_0019-1445247552638-msrabi-pagerank-1445248878331-10-1-SUCCEEDED-default-1445248388426.jhist
+445,10,"2015-10-19 18:01:19,195 INFO [Thread-109] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+446,10,/history/done_intermediate/msrabi/job_1445087491445_0007-1445091992751-msrabi-word+count-1445092782902-10-1-SUCCEEDED-default-1445092004218.jhist_tmp
+447,10,/history/done_intermediate/msrabi/job_1445087491445_0007_conf.xml_tmp
+448,5,/history/done_intermediate/msrabi/job_1445087491445_0007.summary
+449,5,/history/done_intermediate/msrabi/job_1445087491445_0007_conf.xml
+450,5,/history/done_intermediate/msrabi/job_1445087491445_0007-1445091992751-msrabi-word+count-1445092782902-10-1-SUCCEEDED-default-1445092004218.jhist
+451,10,2015-10-17 <*> INFO [Thread-87] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+452,20,2015-10-17 <*> INFO [Thread-54] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+453,10,/history/done_intermediate/msrabi/job_1445062781478_0014-1445067476672-msrabi-pagerank-1445068037828-10-1-SUCCEEDED-default-1445067489454.jhist_tmp
+454,10,/history/done_intermediate/msrabi/job_1445062781478_0014_conf.xml_tmp
+455,5,/history/done_intermediate/msrabi/job_1445062781478_0014.summary
+456,5,/history/done_intermediate/msrabi/job_1445062781478_0014_conf.xml
+457,5,/history/done_intermediate/msrabi/job_1445062781478_0014-1445067476672-msrabi-pagerank-1445068037828-10-1-SUCCEEDED-default-1445067489454.jhist
+458,10,"2015-10-17 15:47:22,469 INFO [Thread-111] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+459,10,/history/done_intermediate/msrabi/job_1445062781478_0013-1445067474867-msrabi-pagerank-1445068682874-10-1-SUCCEEDED-default-1445068409976.jhist_tmp
+460,10,/history/done_intermediate/msrabi/job_1445062781478_0013_conf.xml_tmp
+461,5,/history/done_intermediate/msrabi/job_1445062781478_0013.summary
+462,5,/history/done_intermediate/msrabi/job_1445062781478_0013_conf.xml
+463,5,/history/done_intermediate/msrabi/job_1445062781478_0013-1445067474867-msrabi-pagerank-1445068682874-10-1-SUCCEEDED-default-1445068409976.jhist
+464,1933,<*> <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: PendingReds:1 <*> ScheduledReds:0 <*> AssignedReds:0 <*> CompletedReds:0 <*> <*> <*> <*>
+465,10,/history/done_intermediate/msrabi/job_1445182159119_0017-1445247551183-msrabi-pagerank-1445247776598-10-1-SUCCEEDED-default-1445247558273.jhist_tmp
+466,10,/history/done_intermediate/msrabi/job_1445182159119_0017_conf.xml_tmp
+467,5,/history/done_intermediate/msrabi/job_1445182159119_0017.summary
+468,5,/history/done_intermediate/msrabi/job_1445182159119_0017_conf.xml
+469,5,/history/done_intermediate/msrabi/job_1445182159119_0017-1445247551183-msrabi-pagerank-1445247776598-10-1-SUCCEEDED-default-1445247558273.jhist
+470,10,"2015-10-19 17:43:06,004 INFO [Thread-97] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+471,10,/history/done_intermediate/msrabi/job_1445094324383_0005-1445094473081-msrabi-word+count-1445097000193-10-1-SUCCEEDED-default-1445094480534.jhist_tmp
+472,10,/history/done_intermediate/msrabi/job_1445094324383_0005_conf.xml_tmp
+473,5,/history/done_intermediate/msrabi/job_1445094324383_0005.summary
+474,5,/history/done_intermediate/msrabi/job_1445094324383_0005_conf.xml
+475,5,/history/done_intermediate/msrabi/job_1445094324383_0005-1445094473081-msrabi-word+count-1445097000193-10-1-SUCCEEDED-default-1445094480534.jhist
+476,10,"2015-10-17 23:50:00,974 INFO [Thread-193] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+477,10,/history/done_intermediate/msrabi/job_1445182159119_0005-1445235688984-msrabi-word+count-1445237386355-10-1-SUCCEEDED-default-1445236911535.jhist_tmp
+478,10,/history/done_intermediate/msrabi/job_1445182159119_0005_conf.xml_tmp
+479,5,/history/done_intermediate/msrabi/job_1445182159119_0005.summary
+480,5,/history/done_intermediate/msrabi/job_1445182159119_0005_conf.xml
+481,5,/history/done_intermediate/msrabi/job_1445182159119_0005-1445235688984-msrabi-word+count-1445237386355-10-1-SUCCEEDED-default-1445236911535.jhist
+482,10,"2015-10-19 14:49:47,277 INFO [Thread-101] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+483,25,2015-10-18 <*> INFO [communication thread] org.apache.hadoop.mapred.Task: Process Thread Dump: Communication exception
+484,25,<*> active threads
+485,20,Thread 21 (SpillThread):
+486,315,State: <*>
+487,315,Blocked count: <*>
+488,315,Waited count: <*>
+489,90,Waiting on <*>
+490,315,Stack:
+491,90,sun.misc.Unsafe.park(Native Method)
+492,40,java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+493,40,java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+494,20,org.apache.hadoop.mapred.MapTask$MapOutputBuffer$SpillThread.run(MapTask.java:1521)
+495,25,Thread 20 <*>
+496,25,java.lang.Thread.sleep(Native Method)
+497,25,org.apache.hadoop.hdfs.PeerCache.run(PeerCache.java:244)
+498,25,org.apache.hadoop.hdfs.PeerCache.access$000(PeerCache.java:41)
+499,25,org.apache.hadoop.hdfs.PeerCache$1.run(PeerCache.java:119)
+500,120,java.lang.Thread.run(Thread.java:724)
+501,25,Thread 16 (communication thread):
+502,150,<*> Method)
+503,25,sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:174)
+504,25,sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:139)
+505,25,org.apache.hadoop.util.ReflectionUtils.printThreadInfo(ReflectionUtils.java:165)
+506,25,org.apache.hadoop.util.ReflectionUtils.logThreadInfo(ReflectionUtils.java:219)
+507,25,org.apache.hadoop.mapred.Task$TaskReporter.run(Task.java:760)
+508,25,Thread 15 (Thread for syncLogs):
+509,50,java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+510,25,java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+511,25,java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+512,25,java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+513,70,java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+514,70,java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+515,70,java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+516,25,Thread 13 (IPC Parameter Sending Thread #0):
+517,25,java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+518,25,java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:359)
+519,25,java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:942)
+520,25,Thread 11 (Timer for 'MapTask' metrics system):
+521,25,java.util.TimerThread.mainLoop(Timer.java:552)
+522,25,java.util.TimerThread.run(Timer.java:505)
+523,25,Thread 10 (Thread-1):
+524,25,sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:142)
+525,25,Thread 5 (Attach Listener):
+526,25,Thread 4 (Signal Dispatcher):
+527,25,Thread 3 (Finalizer):
+528,25,java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+529,25,java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+530,25,java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:189)
+531,25,Thread 2 (Reference Handler):
+532,25,java.lang.Object.wait(Object.java:503)
+533,25,java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+534,25,Thread 1 (main):
+535,20,sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+536,20,sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+537,20,sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+538,20,sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+539,20,sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+540,20,org.apache.hadoop.net.SocketIOWithTimeout$SelectorPool.select(SocketIOWithTimeout.java:335)
+541,20,org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:157)
+542,20,org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:161)
+543,20,org.apache.hadoop.hdfs.protocol.datatransfer.PacketReceiver.readChannelFully(PacketReceiver.java:258)
+544,20,org.apache.hadoop.hdfs.protocol.datatransfer.PacketReceiver.doReadFully(PacketReceiver.java:209)
+545,20,org.apache.hadoop.hdfs.protocol.datatransfer.PacketReceiver.doRead(PacketReceiver.java:171)
+546,20,org.apache.hadoop.hdfs.protocol.datatransfer.PacketReceiver.receiveNextPacket(PacketReceiver.java:102)
+547,20,org.apache.hadoop.hdfs.RemoteBlockReader2.readNextPacket(RemoteBlockReader2.java:186)
+548,20,org.apache.hadoop.hdfs.RemoteBlockReader2.read(RemoteBlockReader2.java:146)
+549,20,org.apache.hadoop.hdfs.DFSInputStream$ByteArrayStrategy.doRead(DFSInputStream.java:693)
+550,20,org.apache.hadoop.hdfs.DFSInputStream.readBuffer(DFSInputStream.java:749)
+551,20,org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:806)
+552,20,org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:847)
+553,20,java.io.DataInputStream.read(DataInputStream.java:100)
+554,25,"2015-10-18 <*> WARN [communication thread] org.apache.hadoop.mapred.Task: Last retry, killing <*>"
+555,5,"2015-10-18 21:39:34,868 INFO [main] org.apache.hadoop.hdfs.DFSClient: Could not obtain BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 from any node: java.io.IOException: No live nodes contain block BP-1347369012-10.190.173.170-1444972147527:blk_1073742989_2201 after checking nodes = [172.22.149.145:50010, 10.190.173.170:50010], ignoredNodes = null No live nodes contain current block Block locations: 172.22.149.145:50010 10.190.173.170:50010 Dead nodes: 10.190.173.170:50010 172.22.149.145:50010 10.86.169.121:50010. Will get new block locations from namenode and retry..."
+556,20,Thread <*> (Readahead Thread <*>
+557,20,java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:374)
+558,5,java.util.zip.CRC32.update(CRC32.java:65)
+559,5,org.apache.hadoop.util.DataChecksum.update(DataChecksum.java:265)
+560,5,org.apache.hadoop.mapred.IFileOutputStream.write(IFileOutputStream.java:87)
+561,5,org.apache.hadoop.mapred.IFileOutputStream.write(IFileOutputStream.java:94)
+562,5,org.apache.hadoop.fs.FSDataOutputStream$PositionCache.write(FSDataOutputStream.java:50)
+563,5,java.io.DataOutputStream.writeByte(DataOutputStream.java:153)
+564,5,org.apache.hadoop.io.WritableUtils.writeVLong(WritableUtils.java:273)
+565,5,org.apache.hadoop.io.WritableUtils.writeVInt(WritableUtils.java:253)
+566,5,org.apache.hadoop.mapred.IFile$Writer.append(IFile.java:214)
+567,5,org.apache.hadoop.mapred.Task$CombineOutputCollector.collect(Task.java:1313)
+568,5,org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter.write(Task.java:1630)
+569,5,org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+570,5,org.apache.hadoop.mapreduce.lib.reduce.WrappedReducer$Context.write(WrappedReducer.java:105)
+571,5,org.apache.hadoop.examples.WordCount$IntSumReducer.reduce(WordCount.java:64)
+572,5,org.apache.hadoop.examples.WordCount$IntSumReducer.reduce(WordCount.java:52)
+573,5,org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:171)
+574,5,org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1651)
+575,5,org.apache.hadoop.mapred.MapTask$MapOutputBuffer.mergeParts(MapTask.java:1911)
+576,5,org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1504)
+577,5,"2015-10-19 14:26:44,223 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: completedMapPercent 0.7 totalResourceLimit:<memory:9216, vCores:-18> finalMapResourceLimit:<memory:4608, vCores:-9> finalReduceResourceLimit:<memory:4608, vCores:-9> netScheduledMapResource:<memory:7168, vCores:7> netScheduledReduceResource:<memory:1024, vCores:1>"
+578,10,/history/done_intermediate/msrabi/job_1445182159119_0003-1445235687728-msrabi-word+count-1445236974655-10-1-SUCCEEDED-default-1445235698649.jhist_tmp
+579,10,/history/done_intermediate/msrabi/job_1445182159119_0003_conf.xml_tmp
+580,5,/history/done_intermediate/msrabi/job_1445182159119_0003.summary
+581,5,/history/done_intermediate/msrabi/job_1445182159119_0003_conf.xml
+582,5,/history/done_intermediate/msrabi/job_1445182159119_0003-1445235687728-msrabi-word+count-1445236974655-10-1-SUCCEEDED-default-1445235698649.jhist
+583,10,2015-10-19 <*> INFO [Thread-141] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+584,10,/history/done_intermediate/msrabi/job_1445062781478_0019-1445071656627-msrabi-pagerank-1445073067476-10-1-SUCCEEDED-default-1445072789649.jhist_tmp
+585,10,/history/done_intermediate/msrabi/job_1445062781478_0019_conf.xml_tmp
+586,5,/history/done_intermediate/msrabi/job_1445062781478_0019.summary
+587,5,/history/done_intermediate/msrabi/job_1445062781478_0019_conf.xml
+588,5,/history/done_intermediate/msrabi/job_1445062781478_0019-1445071656627-msrabi-pagerank-1445073067476-10-1-SUCCEEDED-default-1445072789649.jhist
+589,10,2015-10-17 <*> INFO [Thread-100] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+590,10,/history/done_intermediate/msrabi/job_1445182159119_0020-1445247554890-msrabi-pagerank-1445248864486-10-1-SUCCEEDED-default-1445248046659.jhist_tmp
+591,10,/history/done_intermediate/msrabi/job_1445182159119_0020_conf.xml_tmp
+592,5,/history/done_intermediate/msrabi/job_1445182159119_0020.summary
+593,5,/history/done_intermediate/msrabi/job_1445182159119_0020_conf.xml
+594,5,/history/done_intermediate/msrabi/job_1445182159119_0020-1445247554890-msrabi-pagerank-1445248864486-10-1-SUCCEEDED-default-1445248046659.jhist
+595,10,"2015-10-19 18:01:06,877 INFO [Thread-114] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+596,10,/history/done_intermediate/msrabi/job_1445144423722_0022-1445162506766-msrabi-pagerank-1445163053703-10-1-SUCCEEDED-default-1445162512818.jhist_tmp
+597,10,/history/done_intermediate/msrabi/job_1445144423722_0022_conf.xml_tmp
+598,5,/history/done_intermediate/msrabi/job_1445144423722_0022.summary
+599,5,/history/done_intermediate/msrabi/job_1445144423722_0022_conf.xml
+600,5,/history/done_intermediate/msrabi/job_1445144423722_0022-1445162506766-msrabi-pagerank-1445163053703-10-1-SUCCEEDED-default-1445162512818.jhist
+601,10,2015-10-18 <*> INFO [Thread-115] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+602,10,2015-10-18 <*> INFO [Thread-125] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+603,10,java.net.ConnectException: Connection refused: no further information
+604,5,"2015-10-17 21:49:58,486 WARN [main] org.apache.hadoop.hdfs.DFSClient: Failed to connect to /10.86.169.121:50010 for block, add to deadNodes and continue. java.net.ConnectException: Connection refused: no further information"
+605,10,/history/done_intermediate/msrabi/job_1445087491445_0005-1445088243632-msrabi-word+count-1445090485571-13-1-SUCCEEDED-default-1445089672614.jhist_tmp
+606,10,/history/done_intermediate/msrabi/job_1445087491445_0005_conf.xml_tmp
+607,5,/history/done_intermediate/msrabi/job_1445087491445_0005.summary
+608,5,/history/done_intermediate/msrabi/job_1445087491445_0005_conf.xml
+609,5,/history/done_intermediate/msrabi/job_1445087491445_0005-1445088243632-msrabi-word+count-1445090485571-13-1-SUCCEEDED-default-1445089672614.jhist
+610,10,2015-10-17 <*> INFO [Thread-147] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+611,10,/history/done_intermediate/msrabi/job_1445175094696_0001-1445175178663-msrabi-word+count-1445175930238-10-1-SUCCEEDED-default-1445175188000.jhist_tmp
+612,10,/history/done_intermediate/msrabi/job_1445175094696_0001_conf.xml_tmp
+613,10,2015-10-18 <*> INFO [Thread-128] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+614,5,/history/done_intermediate/msrabi/job_1445175094696_0001.summary
+615,5,/history/done_intermediate/msrabi/job_1445175094696_0001_conf.xml
+616,5,/history/done_intermediate/msrabi/job_1445175094696_0001-1445175178663-msrabi-word+count-1445175930238-10-1-SUCCEEDED-default-1445175188000.jhist
+617,10,2015-10-18 <*> INFO [Thread-123] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+618,81,2015-10-19 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: PendingReds:0 <*> <*> <*> <*> <*> <*> <*> ContRel:1 <*> <*>
+619,10,/history/done_intermediate/msrabi/job_1445182159119_0013-1445240988628-msrabi-pagerank-1445241437667-10-1-SUCCEEDED-default-1445240997639.jhist_tmp
+620,10,/history/done_intermediate/msrabi/job_1445182159119_0013_conf.xml_tmp
+621,5,/history/done_intermediate/msrabi/job_1445182159119_0013.summary
+622,5,/history/done_intermediate/msrabi/job_1445182159119_0013_conf.xml
+623,5,/history/done_intermediate/msrabi/job_1445182159119_0013-1445240988628-msrabi-pagerank-1445241437667-10-1-SUCCEEDED-default-1445240997639.jhist
+624,10,2015-10-19 <*> INFO [Thread-108] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+625,10,/history/done_intermediate/msrabi/job_1445144423722_0021-1445162505377-msrabi-pagerank-1445162724640-10-1-SUCCEEDED-default-1445162511808.jhist_tmp
+626,25,2015-10-18 <*> INFO [Thread-94] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: <*> <*> <*> <*> hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging
+627,10,/history/done_intermediate/msrabi/job_1445144423722_0021_conf.xml_tmp
+628,5,/history/done_intermediate/msrabi/job_1445144423722_0021.summary
+629,5,/history/done_intermediate/msrabi/job_1445144423722_0021_conf.xml
+630,5,/history/done_intermediate/msrabi/job_1445144423722_0021-1445162505377-msrabi-pagerank-1445162724640-10-1-SUCCEEDED-default-1445162511808.jhist
+631,10,"2015-10-18 18:05:48,719 INFO [Thread-94] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+632,10,/history/done_intermediate/msrabi/job_1445182159119_0015-1445240991382-msrabi-pagerank-1445241754459-10-1-SUCCEEDED-default-1445241361172.jhist_tmp
+633,10,/history/done_intermediate/msrabi/job_1445182159119_0015_conf.xml_tmp
+634,5,/history/done_intermediate/msrabi/job_1445182159119_0015.summary
+635,5,/history/done_intermediate/msrabi/job_1445182159119_0015_conf.xml
+636,5,/history/done_intermediate/msrabi/job_1445182159119_0015-1445240991382-msrabi-pagerank-1445241754459-10-1-SUCCEEDED-default-1445241361172.jhist
+637,10,"2015-10-19 16:02:35,646 INFO [Thread-115] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+638,10,/history/done_intermediate/msrabi/job_1445175094696_0005-1445175181929-msrabi-word+count-1445176478000-10-1-SUCCEEDED-default-1445175951295.jhist_tmp
+639,10,/history/done_intermediate/msrabi/job_1445175094696_0005_conf.xml_tmp
+640,5,/history/done_intermediate/msrabi/job_1445175094696_0005.summary
+641,5,/history/done_intermediate/msrabi/job_1445175094696_0005_conf.xml
+642,5,/history/done_intermediate/msrabi/job_1445175094696_0005-1445175181929-msrabi-word+count-1445176478000-10-1-SUCCEEDED-default-1445175951295.jhist
+643,10,"2015-10-18 21:54:38,593 INFO [Thread-106] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+644,5,"2015-10-17 16:53:31,853 INFO [IPC Server handler 27 on 19061] org.apache.hadoop.mapred.TaskAttemptListenerImpl: MapCompletionEvents reques"
+645,10,2015-10-19 <*> INFO [Thread-56] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+646,10,/history/done_intermediate/msrabi/job_1445182159119_0018-1445247551536-msrabi-pagerank-1445249001110-10-1-SUCCEEDED-default-1445248396740.jhist_tmp
+647,10,/history/done_intermediate/msrabi/job_1445182159119_0018_conf.xml_tmp
+648,5,/history/done_intermediate/msrabi/job_1445182159119_0018.summary
+649,5,/history/done_intermediate/msrabi/job_1445182159119_0018_conf.xml
+650,5,/history/done_intermediate/msrabi/job_1445182159119_0018-1445247551536-msrabi-pagerank-1445249001110-10-1-SUCCEEDED-default-1445248396740.jhist
+651,10,"2015-10-19 18:03:21,594 INFO [Thread-117] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+652,10,/history/done_intermediate/msrabi/job_1445182159119_0012-1445240987944-msrabi-pagerank-1445241196006-10-1-SUCCEEDED-default-1445240996264.jhist_tmp
+653,10,/history/done_intermediate/msrabi/job_1445182159119_0012_conf.xml_tmp
+654,5,/history/done_intermediate/msrabi/job_1445182159119_0012.summary
+655,5,/history/done_intermediate/msrabi/job_1445182159119_0012_conf.xml
+656,5,/history/done_intermediate/msrabi/job_1445182159119_0012-1445240987944-msrabi-pagerank-1445241196006-10-1-SUCCEEDED-default-1445240996264.jhist
+657,10,"2015-10-19 15:53:16,740 INFO [Thread-94] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+658,10,/history/done_intermediate/msrabi/job_1445087491445_0001-1445088243078-msrabi-word+count-1445089632420-13-1-SUCCEEDED-default-1445088252553.jhist_tmp
+659,10,/history/done_intermediate/msrabi/job_1445087491445_0001_conf.xml_tmp
+660,10,2015-10-17 <*> INFO [Thread-163] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+661,5,/history/done_intermediate/msrabi/job_1445087491445_0001.summary
+662,5,/history/done_intermediate/msrabi/job_1445087491445_0001_conf.xml
+663,5,/history/done_intermediate/msrabi/job_1445087491445_0001-1445088243078-msrabi-word+count-1445089632420-13-1-SUCCEEDED-default-1445088252553.jhist
+664,10,"2015-10-17 21:47:31,749 INFO [Thread-158] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+665,10,2015-10-18 <*> INFO [Thread-626] org.apache.hadoop.service.AbstractService: Service <*> failed in state STOPPED; cause: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: java.net.NoRouteToHostException: No Route to Host from MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see: http://wiki.apache.org/hadoop/NoRouteToHost
+666,10,"2015-10-18 21:45:16,048 INFO [Thread-626] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+667,10,/history/done_intermediate/msrabi/job_1445175094696_0003-1445175179225-msrabi-word+count-1445176599683-10-1-SUCCEEDED-default-1445175186428.jhist_tmp
+668,10,/history/done_intermediate/msrabi/job_1445175094696_0003_conf.xml_tmp
+669,5,/history/done_intermediate/msrabi/job_1445175094696_0003.summary
+670,5,/history/done_intermediate/msrabi/job_1445175094696_0003_conf.xml
+671,5,/history/done_intermediate/msrabi/job_1445175094696_0003-1445175179225-msrabi-word+count-1445176599683-10-1-SUCCEEDED-default-1445175186428.jhist
+672,10,2015-10-18 <*> INFO [Thread-81] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+673,10,/history/done_intermediate/msrabi/job_1445062781478_0018-1445071655606-msrabi-pagerank-1445073306943-10-1-SUCCEEDED-default-1445071661919.jhist_tmp
+674,10,/history/done_intermediate/msrabi/job_1445062781478_0018_conf.xml_tmp
+675,5,/history/done_intermediate/msrabi/job_1445062781478_0018.summary
+676,5,/history/done_intermediate/msrabi/job_1445062781478_0018_conf.xml
+677,5,/history/done_intermediate/msrabi/job_1445062781478_0018-1445071655606-msrabi-pagerank-1445073306943-10-1-SUCCEEDED-default-1445071661919.jhist
+678,10,2015-10-17 <*> INFO [Thread-79] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+679,5,"2015-10-17 23:12:21,506 WARN [IPC Server handler 29 on 58622] org.apache.hadoop.ipc.Server: IPC Server handler 29 on 58622, call statusUpdate(attempt_1445094324383_0003_m_000000_0, org.apache.hadoop.mapred.MapTaskStatus@cdcdbf7), rpc version=2, client version=19, methodsFingerPrint=937413979 from 10.86.169.121:52490 Call#68 Retry#0: output error"
+680,5,"2015-10-17 23:12:21,506 INFO [IPC Server handler 29 on 58622] org.apache.hadoop.ipc.Server: IPC Server handler 29 on 58622 caught an exception"
+681,10,/history/done_intermediate/msrabi/job_1445094324383_0003-1445094473124-msrabi-word+count-1445095679409-10-1-SUCCEEDED-default-1445094480842.jhist_tmp
+682,10,/history/done_intermediate/msrabi/job_1445094324383_0003_conf.xml_tmp
+683,5,/history/done_intermediate/msrabi/job_1445094324383_0003.summary
+684,5,/history/done_intermediate/msrabi/job_1445094324383_0003_conf.xml
+685,5,/history/done_intermediate/msrabi/job_1445094324383_0003-1445094473124-msrabi-word+count-1445095679409-10-1-SUCCEEDED-default-1445094480842.jhist
+686,10,"2015-10-17 23:28:02,174 INFO [Thread-138] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>"
+687,10,/history/done_intermediate/msrabi/job_1445062781478_0012-1445067474738-msrabi-pagerank-1445068175962-10-1-SUCCEEDED-default-1445067485173.jhist_tmp
+688,10,2015-10-17 <*> INFO [Thread-125] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+689,10,/history/done_intermediate/msrabi/job_1445062781478_0012_conf.xml_tmp
+690,5,/history/done_intermediate/msrabi/job_1445062781478_0012.summary
+691,5,/history/done_intermediate/msrabi/job_1445062781478_0012_conf.xml
+692,5,/history/done_intermediate/msrabi/job_1445062781478_0012-1445067474738-msrabi-pagerank-1445068175962-10-1-SUCCEEDED-default-1445067485173.jhist
+693,10,2015-10-17 <*> INFO [Thread-93] org.apache.hadoop.hdfs.DFSClient: <*> <*> <*>
+694,10,/history/done_intermediate/msrabi/job_1445094324383_0002-1445094473189-msrabi-word+count-1445097067469-10-1-SUCCEEDED-default-1445095245355.jhist_tmp
+695,10,/history/done_intermediate/msrabi/job_1445094324383_0002_conf.xml_tmp
+696,5,/history/done_intermediate/msrabi/job_1445094324383_0002.summary
+697,5,/history/done_intermediate/msrabi/job_1445094324383_0002_conf.xml
+698,5,/history/done_intermediate/msrabi/job_1445094324383_0002-1445094473189-msrabi-word+count-1445097067469-10-1-SUCCEEDED-default-1445095245355.jhist
+699,10,2015-10-17 <*> INFO [Thread-152] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
+700,236,2015-10-19 <*> INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> Scheduling: PendingReds:0 <*> <*> <*> <*> <*> CompletedReds:0 <*> ContRel:2 <*> <*>
+701,5,"2015-10-19 18:08:58,624 INFO [IPC Server handler 28 on 55796] org.apache.hadoop.map"
+702,10,/history/done_intermediate/msrabi/job_1445087491445_0003-1445088243334-msrabi-word+count-1445089655963-13-1-SUCCEEDED-default-1445088258186.jhist_tmp
+703,10,/history/done_intermediate/msrabi/job_1445087491445_0003_conf.xml_tmp
+704,5,/history/done_intermediate/msrabi/job_1445087491445_0003.summary
+705,5,/history/done_intermediate/msrabi/job_1445087491445_0003_conf.xml
+706,5,/history/done_intermediate/msrabi/job_1445087491445_0003-1445088243334-msrabi-word+count-1445089655963-13-1-SUCCEEDED-default-1445088258186.jhist
+707,10,2015-10-17 <*> INFO [Thread-159] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: <*> <*> <*> <*>
