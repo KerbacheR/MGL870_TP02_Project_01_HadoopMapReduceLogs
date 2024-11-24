@@ -172,13 +172,11 @@ event_counts = pd.to_numeric(event_counts, errors='coerce')  # Convertir en num�
 failure_events = event_counts[event_counts > 0].index
 print(f"Les événements avec des occurrences (échec) : {failure_events}")
 
-
 print("Événements liés aux pannes:")
 print(failure_events)
 
 print("Distribution des pannes:")
 print(event_counts[failure_events])
-
 
 #Visualisation en graphe
 import matplotlib.pyplot as plt
@@ -216,7 +214,6 @@ def plot_failure_distribution(event_counts):
 
 # Afficher les statistiques des pannes
 plot_failure_distribution(event_counts)
-
 
 # Apprentissage avec modèle de regression logistique
 import pandas as pd
@@ -326,8 +323,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, recall_score, roc_auc_score, precision_score
 
 # Séparation des features et de la cible
-X = event_matrix_df.drop(columns=['Event_100'])
-y = event_matrix_df['Event_100']
+X = event_matrix_df.drop(columns=[target_event])
+y = event_matrix_df[target_event]
 
 # Suppression des corrélations élevées
 
