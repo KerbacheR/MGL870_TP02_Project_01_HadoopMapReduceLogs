@@ -1,2 +1,2 @@
-The correct program to execute should be with last version exemple : process_logs_v9.py
+The correct program to execute should be the last version if file : process_logs_v10.py Exemple : process_logs_v10.py
 
